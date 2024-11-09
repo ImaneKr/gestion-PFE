@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+.main {
+  background-color: #f8f9fb;
+}
+h1 {
+  padding: 20px;
+}
+.wrapper {
+  padding: 0 3%;
+}
+.container {
+  display: grid;
+  grid-template-columns: 20% 50%;
+  gap: 3%;
+  height: 95vh;
+}
+
+.section1 {
+  background-color: #ffffff;
+  height: 38vh;
+  padding: 15px;
+  border-radius: 10px;
+}
+.section2 {
+  background-color: #ffffff;
+  height: 82vh;
+  border-radius: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 30px;
+}
+
+a.link {
+  text-decoration: none;
+  color: black;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+a.link .icon {
+  margin-right: 8px;
+}
+
+.profileContainer {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  width: 400px;
+}
+
+.ProfilePicture img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.info h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.info .role {
+  font-size: 1em;
+  color: #82858b;
+}
+.info .buttons {
+  display: flex;
+  width: 100%;
+  gap: 15px;
+}
+button {
+  padding: 10px 20px;
+  border: none;
+  margin-top: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.upload {
+  background-color: #52ada2;
+  color: white;
+}
+
+button.delete {
+  background-color: white;
+  color: black;
+  border: 0.5px solid #d9d9d9;
+  font-weight: bold;
+}
+
+.infoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-left: 15px;
+}
+
+.formu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.formu .buttons {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding-top: 22%;
+  margin-top: 20px;
+}
+
+.cancel {
+  margin-left: 10px;
+  background-color: white;
+  color: black;
+  border: 0.5px solid #d9d9d9;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.save {
+  margin-left: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+}
+
+.formu > div {
+  flex: 1 1 45%;
+}
