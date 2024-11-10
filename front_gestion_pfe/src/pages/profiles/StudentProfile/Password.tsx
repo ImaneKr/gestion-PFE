@@ -1,10 +1,15 @@
 import InputField from "../../../components/InputField";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import styles from "../../../styles/Password.module.css";
 
 function Password() {
   return (
     <div className={styles.main}>
+      <div className={styles.pagePath}>
+        <a href="">Home</a>
+        <p>{">"}</p>
+        <a href="">Profile</a>
+      </div>
       <h1>Password</h1>
       <div className={styles.wrapper}>
         <div className={styles.container}>
@@ -16,9 +21,14 @@ function Password() {
                 </Link>
               </li>
               <li>
-                <Link to="/Password" className={styles.link}>
+                <NavLink
+                  to="/Password"
+                  className={({ isActive }) =>
+                    isActive ? `${styles.link} ${styles.active}` : styles.link
+                  }
+                >
                   <i className={styles.icon}>🔒</i> Password
-                </Link>
+                </NavLink>
               </li>
               <li>
                 <Link to="/AcademicInfo" className={styles.link}>

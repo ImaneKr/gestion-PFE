@@ -1,10 +1,15 @@
 import InputField from "../../../components/InputField";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import styles from "../../../styles/Profile.module.css";
 
 function AcademicInfo() {
   return (
     <div className={styles.main}>
+      <div className={styles.pagePath}>
+        <a href="">Home</a>
+        <p>{">"}</p>
+        <a href="">Profile</a>
+      </div>
       <h1>Academic Information</h1>
       <div className={styles.wrapper}>
         <div className={styles.container}>
@@ -21,9 +26,14 @@ function AcademicInfo() {
                 </Link>
               </li>
               <li>
-                <Link to="/AcademicInfo" className={styles.link}>
+                <NavLink
+                  to="/AcademicInfo"
+                  className={({ isActive }) =>
+                    isActive ? `${styles.link} ${styles.active}` : styles.link
+                  }
+                >
                   <i className={styles.icon}>🔗</i> Academic Information
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </div>

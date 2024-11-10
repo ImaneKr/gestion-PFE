@@ -7,6 +7,22 @@
 .main {
   background-color: #f8f9fb;
 }
+.pagePath {
+  display: flex;
+  align-items: center;
+  color: #424d60;
+  font-weight: 400;
+}
+
+.pagePath a {
+  text-decoration: none;
+  padding: 5px;
+}
+
+.pagePath p {
+  margin: 0 5px;
+}
+
 h1 {
   padding: 20px;
 }
@@ -48,6 +64,9 @@ a.link {
   display: flex;
   align-items: center;
   font-weight: 500;
+}
+a.active {
+  color: #52ada2;
 }
 
 a.link .icon {

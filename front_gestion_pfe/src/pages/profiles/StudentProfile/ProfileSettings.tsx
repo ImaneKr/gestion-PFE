@@ -1,19 +1,29 @@
 import styles from "../../../styles/Profile.module.css";
 import pfp from "../../../assets/pfp.png";
 import InputField from "../../../components/InputField";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 function ProfileSettings() {
   return (
     <div className={styles.main}>
+      <div className={styles.pagePath}>
+        <a href="">Home</a>
+        <p>{">"}</p>
+        <a href="">Profile</a>
+      </div>
       <h1>Profile Settings</h1>
       <div className={styles.wrapper}>
         <div className={styles.container}>
           <div className={styles.section1}>
             <ul>
               <li>
-                <Link to="/" className={styles.link}>
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    isActive ? `${styles.link} ${styles.active}` : styles.link
+                  }
+                >
                   <i className={styles.icon}>😒</i> Profile Settings
-                </Link>
+                </NavLink>
               </li>
               <li>
                 <Link to="/Password" className={styles.link}>
