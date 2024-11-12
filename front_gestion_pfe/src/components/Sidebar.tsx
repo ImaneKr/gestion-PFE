@@ -5,8 +5,10 @@ import { useState } from "react";
 import {
   AlignJustify,
   Folder,
+  GraduationCap,
   LayoutDashboard,
   LogOut,
+  NotepadText,
   Settings,
   Upload,
   User2,
@@ -15,9 +17,9 @@ import {
 const menuItems = [
   { key: "/", label: "Dashboard", icon: <LayoutDashboard size={23} /> },
   { key: "/NewProject", label: "Submit New Project", icon: <Upload size={23} /> },
-  { key: "/ChooseProject", label: "Choose Project", icon: <Settings size={23} /> },
+  { key: "/ChooseProject", label: "Choose Project", icon: <NotepadText size={23} /> },
   { key: "/MyProject", label: "My Project", icon: <Folder size={23} /> },
-  { key: "/Defense", label: "Defense Schedule", icon: <Settings size={23} /> },
+  { key: "/Defense", label: "Defense Schedule", icon: <GraduationCap size={23} /> },
   { key: "/Settings", label: "Profile and Settings", icon: <User2 size={23} /> },
   { key: "/Logout", label: "Log Out", icon: <LogOut size={23} /> },
 ];
