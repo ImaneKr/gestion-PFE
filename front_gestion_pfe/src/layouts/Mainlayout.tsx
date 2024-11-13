@@ -1,21 +1,30 @@
-// src/components/Layout.tsx
-import { ReactNode } from "react";
-import Sidebar from "../components/Sidebar";
+import { ReactNode, useState } from "react";
+import Sidebar from '../components/Sidebar';
+import Header from "../components/Header";
+import Breadcrumb from "../components/Breadcrumb";
 
 interface LayoutProps {
-  children: ReactNode;
+    children: ReactNode;
 }
 
-const Layout = ({ children }: LayoutProps) => (
-  <div className="flex">
-    <Sidebar />
-    <div className="flex-1 ml-64">
-      {/* Optional: Add a navbar if you have one */}
-      <main className="p-6 pt-16">
-        {children}
-      </main>
-    </div>
-  </div>
-);
+const Layout = ({ children }: LayoutProps) => {
+    const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
+    return (
+        <div className="flex h-screen">
+            {/* Sidebar */}
+            <Sidebar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
+
+            {/* Main content area */}
+            <div className={`flex-1 transition-all duration-300 ${isSidebarOpen ? 'ml-60' : 'ml-0'}`}>
+                <Header />
+                <Breadcrumb/>
+                <main className="p-6 pt-16">
+                    {children}
+                </main>
+            </div>
+        </div>
+    );
+};
 
 export default Layout;

@@ -1,7 +1,10 @@
-
+import { Bell } from 'lucide-react'
 const Header = () => {
   return (
-    <div>Header</div>
+    <header className="bg-white h-14 text-slate-800 justify-end items-center gap-6 flex p-4">
+      <Bell size={24} />
+      <img src='\' className='rounded-full' />
+    </header>
   )
 }
 
