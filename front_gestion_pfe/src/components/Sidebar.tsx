@@ -1,7 +1,5 @@
-// src/components/Sidebar.tsx
 import { Link, useLocation } from "react-router-dom";
 import { Menu } from "antd";
-import { useState } from "react";
 import {
   AlignJustify,
   Folder,
@@ -13,22 +11,28 @@ import {
   User2,
 } from 'lucide-react';
 
+interface SidebarProps {
+  isOpen: boolean;
+  setIsOpen: (open: boolean) => void;
+}
+
 const menuItems = [
   { key: "/", label: "Dashboard", icon: <LayoutDashboard size={23} /> },
   { key: "/NewProject", label: "Submit New Project", icon: <Upload size={23} /> },
-  { key: "/ChooseProject", label: "Project Proposals", icon: <NotepadText size={23} /> },
+  { key: "/ProjectProposals", label: "Project Proposals", icon: <NotepadText size={23} /> },
   { key: "/MyProject", label: "My Project", icon: <Folder size={23} /> },
   { key: "/Defense", label: "Defense Schedule", icon: <GraduationCap size={23} /> },
   { key: "/Settings", label: "Profile and Settings", icon: <User2 size={23} /> },
   { key: "/Logout", label: "Log Out", icon: <LogOut size={23} /> },
 ];
 
-const Sidebar = () => {
+const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
   const location = useLocation();
-  const [isOpen, setIsOpen] = useState(false);
 
   const toggleSidebar = () => {
-    setIsOpen(!isOpen);
+    if (window.innerWidth < 768) { // Prevent toggling when the screen is large
+      setIsOpen(!isOpen);
+    }
   };
 
   return (
@@ -41,8 +45,7 @@ const Sidebar = () => {
 
       {/* Sidebar */}
       <aside
-        className={`fixed top-0 left-0 h-screen bg-white text-slate-800 transition-transform z-40 w-64 ${isOpen ? 'translate-x-0' : '-translate-x-64'
-          } md:translate-x-0`}
+        className={`fixed top-0 left-0 h-screen bg-white text-slate-800 transition-transform z-40 w-60 ${isOpen ? 'translate-x-0' : '-translate-x-60'} md:translate-x-0`}
       >
         <div className="p-4 flex space-x-2 mb-2" onClick={toggleSidebar}>
           <img src="/Group.svg" alt="Logo" />
