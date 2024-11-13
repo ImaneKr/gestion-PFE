@@ -39,18 +39,19 @@ const SubmitFormInput: React.FC<SubmitFormInputProps> = ({
                     onChange={handleChange}
                     maxLength={maxLength}
                     required={required}
-                    style={{ width: '100%', height: '100px', resize: 'vertical', border: '1px solid #ccc', padding: '8px', borderRadius: '4px', outline: 'none' }}
+                    
+                    style={{ width: '100%', height: '100px', resize: 'vertical', border: '1px solid #9095A0', padding: '8px', borderRadius: '4px', outline: 'none' }}
                     onFocus={(e) => (e.target.style.border = '1px solid #52ADA2')}
-                    onBlur={(e) => (e.target.style.border = '1px solid #ccc')}
+                    onBlur={(e) => (e.target.style.border = '1px solid #9095A0')}
                 />
             ) : type === 'select' ? (
                 <select
                     value={value}
                     onChange={handleChange}
                     required={required}
-                    style={{ width: '100%', border: '1px solid #ccc', padding: '8px', borderRadius: '4px', outline: 'none' }}
+                    style={{ width: '100%', border: '1px solid #9095A0', padding: '8px', borderRadius: '4px', outline: 'none' }}
                     onFocus={(e) => (e.target.style.border = '1px solid #52ADA2')}
-                    onBlur={(e) => (e.target.style.border = '1px solid #ccc')}
+                    onBlur={(e) => (e.target.style.border = '1px solid #9095A0')}
                 >
                     <option value="" disabled>{placeholder || 'Select an option'}</option>
                     {options.map((option, index) => (
@@ -68,7 +69,7 @@ const SubmitFormInput: React.FC<SubmitFormInputProps> = ({
                     style={{ width: '100%', border: '1px solid ', padding: '4px', borderRadius: '4px', outline: 'none' }}
                     className=' border-2 bg-white p-1 rounded-md pl-2 '
                     onFocus={(e) => (e.target.style.border = '1px solid #52ADA2')}
-                    onBlur={(e) => (e.target.style.border = '1px solid #1e293b')}
+                    onBlur={(e) => (e.target.style.border = '1px solid #9095A0')}
                 />
             )}
         </div>
