@@ -1,17 +1,20 @@
 // src/App.tsx
-import { BrowserRouter as Router, Routes } from "react-router-dom";
-import Layout from "./layouts/Mainlayout";
+import { BrowserRouter as Router } from "react-router-dom"; //, Routes
+//import Layout from "./layouts/Mainlayout";
 /*import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";*/
-
+import Login from "./pages/Login";
 function App() {
   return (
     <Router>
+      {/* 
       <Layout>
         <Routes>
         </Routes>
-      </Layout>
+      </Layout> 
+      */}
+      <Login />
     </Router>
   );
 }

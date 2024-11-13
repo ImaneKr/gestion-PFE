@@ -1,4 +1,4 @@
-import React, { CSSProperties } from "react";
+import React from "react";
 import './Login.css';
 
 const Login: React.FC = () => {
@@ -24,7 +24,7 @@ const Login: React.FC = () => {
                 </form>
             </div>
             <div className="image-container">
-                <img src="/login.png" alt="Login" className="login-image" />
+                <img src="/login2.png" alt="Login" className="login-image" />
             </div>
         </div>
     );
