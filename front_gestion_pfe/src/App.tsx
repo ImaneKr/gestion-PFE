@@ -10,7 +10,7 @@ function App() {
     <Router>
       <Layout>
         <Routes>
-         </Routes>
+        </Routes>
       </Layout>
     </Router>
   );
