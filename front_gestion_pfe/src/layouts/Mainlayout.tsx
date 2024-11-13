@@ -18,10 +18,13 @@ const Layout = ({ children }: LayoutProps) => {
             {/* Main content area */}
             <div className={`flex-1 transition-all duration-300 ${isSidebarOpen ? 'ml-60' : 'ml-0'}`}>
                 <Header />
-                <Breadcrumb/>
-                <main className="p-6 pt-16">
-                    {children}
-                </main>
+                <div className="pl-3">
+                    <Breadcrumb />
+                    <main className="">
+                        {children}
+                    </main>
+                </div>
+
             </div>
         </div>
     );
