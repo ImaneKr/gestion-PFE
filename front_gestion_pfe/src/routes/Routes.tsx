@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import ProfileSettings from "../pages/profiles/StudentProfile/ProfileSettings.tsx";
-import AcademicInfo from "../pages/profiles/StudentProfile/AcademicInfo.tsx";
-import Password from "../pages/profiles/StudentProfile/Password.tsx";
+import ProfileSettings from "../pages/profiles/TeacherProfile/ProfileSettings.tsx";
+import AcademicInfo from "../pages/profiles/TeacherProfile/AcademicInfo.tsx";
+import Password from "../pages/profiles/TeacherProfile/Password.tsx";
 import ProfileMenu from "../components/ProfileMenu.tsx";
 
 function routes() {
